@@ -104,7 +104,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     main.Name = "main"
     main.Parent = scrgui
     main.AnchorPoint = Vector2.new(0.5, 0.5)
-    main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    main.BackgroundColor3 = Color3.fromRGB(30, 30, 30) -- Dark background
     main.BackgroundTransparency = 0.150
     main.Position = UDim2.new(0.5, 0, 2, 0)
     main.Size = UDim2.new(0, 721, 0, 584)
@@ -155,7 +155,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local workarea = Instance.new("Frame")
     workarea.Name = "workarea"
     workarea.Parent = main
-    workarea.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    workarea.BackgroundColor3 = Color3.fromRGB(40, 40, 40) -- Slightly lighter dark background
     workarea.Position = UDim2.new(0.36403501, 0, 0, 0)
     workarea.Size = UDim2.new(0, 458, 0, 584)
 
@@ -176,7 +176,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local search = Instance.new("Frame")
     search.Name = "search"
     search.Parent = main
-    search.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    search.BackgroundColor3 = Color3.fromRGB(50, 50, 50) -- Dark search bar
     search.Position = UDim2.new(0.0256588068, 0, 0.0958904102, 0)
     search.Size = UDim2.new(0, 225, 0, 34)
 
@@ -199,7 +199,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local searchtextbox = Instance.new("TextBox")
     searchtextbox.Name = "searchtextbox"
     searchtextbox.Parent = search
-    searchtextbox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    searchtextbox.BackgroundColor3 = Color3.fromRGB(50, 50, 50) -- Dark search box
     searchtextbox.BackgroundTransparency = 1
     searchtextbox.ClipsDescendants = true
     searchtextbox.Position = UDim2.new(0.180257514, 0, -0.0162218884, 0)
@@ -208,7 +208,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     searchtextbox.LineHeight = 0.870
     searchtextbox.PlaceholderText = "Search"
     searchtextbox.Text = ""
-    searchtextbox.TextColor3 = Color3.fromRGB(95, 95, 95)
+    searchtextbox.TextColor3 = Color3.fromRGB(200, 200, 200) -- Light text color
     searchtextbox.TextSize = 22
     searchtextbox.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -331,14 +331,14 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local title = Instance.new("TextLabel")
     title.Name = "title"
     title.Parent = main
-    title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    title.BackgroundColor3 = Color3.fromRGB(30, 30, 30) -- Dark background
     title.BackgroundTransparency = 1
     title.BorderSizePixel = 2
     title.Position = UDim2.new(0.389000326, 0, 0.0351027399, 0)
     title.Size = UDim2.new(0, 400, 0, 15)
     title.Font = Enum.Font.Gotham
     title.LineHeight = 1.180
-    title.TextColor3 = Color3.fromRGB(0, 0, 0)
+    title.TextColor3 = Color3.fromRGB(200, 200, 200) -- Light text color
     title.TextSize = 28
     title.TextWrapped = true
     title.TextXAlignment = Enum.TextXAlignment.Left
@@ -810,12 +810,12 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
             button.Name = "button"
             button.Text = name
             button.Parent = workareamain
-            button.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+            button.BackgroundColor3 = Color3.fromRGB(60, 60, 60) -- Dark button background
             button.BackgroundTransparency = 1
             button.Size = UDim2.new(0, 418, 0, 37)
             button.ZIndex = 2
             button.Font = Enum.Font.Gotham
-            button.TextColor3 = Color3.fromRGB(21, 103, 251)
+            button.TextColor3 = Color3.fromRGB(200, 200, 200) -- Light text color
             button.TextSize = 21
 
             local uc_3 = Instance.new("UICorner")
@@ -844,12 +844,12 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
             local label = Instance.new("TextLabel")
             label.Name = "label"
             label.Parent = workareamain
-            label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            label.BackgroundColor3 = Color3.fromRGB(40, 40, 40) -- Dark background
             label.BackgroundTransparency = 1
             label.BorderSizePixel = 2
             label.Size = UDim2.new(0, 418, 0, 37)
             label.Font = Enum.Font.Gotham
-            label.TextColor3 = Color3.fromRGB(95, 95, 95)
+            label.TextColor3 = Color3.fromRGB(200, 200, 200) -- Light text color
             label.TextSize = 21
             label.TextWrapped = true
             label.Text = name
@@ -895,10 +895,10 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
 
             if defaultmode == false then
                 TextButton.Position = UDim2.new(0, 1, 0, 1)
-                Frame.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+                Frame.BackgroundColor3 = Color3.fromRGB(60, 60, 60) -- Dark off state
             else
                 TextButton.Position = UDim2.new(0, 35, 0, 1)
-                Frame.BackgroundColor3 = Color3.fromRGB(21, 103, 251)
+                Frame.BackgroundColor3 = Color3.fromRGB(0, 120, 215) -- Blue on state
             end
 
             Frame.MouseButton1Click:Connect(function()
