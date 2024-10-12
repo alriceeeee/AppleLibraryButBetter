@@ -13,7 +13,31 @@ jobs:
         uses: Ilshidur/action-discord@master
         with:
           args: |
-            New commit to {{ EVENT_PAYLOAD.repository.full_name }}
-            **Commit Message:** {{ EVENT_PAYLOAD.head_commit.message }}
-            **Author:** {{ EVENT_PAYLOAD.head_commit.author.name }}
-            **Changes:** {{ EVENT_PAYLOAD.head_commit.url }}
+            {
+              "embeds": [{
+                "title": "New commit to ${{ github.repository }}",
+                "description": "${{ github.event.head_commit.message }}",
+                "color": 5814783,
+                "author": {
+                  "name": "${{ github.event.head_commit.author.name }}",
+                  "icon_url": "https://github.com/${{ github.event.head_commit.author.username }}.png"
+                },
+                "fields": [
+                  {
+                    "name": "Commit",
+                    "value": "[${{ github.event.head_commit.id }}](${{ github.event.head_commit.url }})",
+                    "inline": true
+                  },
+                  {
+                    "name": "Branch",
+                    "value": "${{ github.ref_name }}",
+                    "inline": true
+                  }
+                ],
+                "footer": {
+                  "text": "GitHub",
+                  "icon_url": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                },
+                "timestamp": "${{ github.event.head_commit.timestamp }}"
+              }]
+            }
