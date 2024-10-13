@@ -2,7 +2,7 @@ local library = loadstring(game:HttpGet("https://github.com/alriceeeee/AppleLibr
 
 local window = library:init("Titlebar", true, Enum.KeyCode.RightShift, true)
 
-window:Divider("I'm a divider!")
+window:Divider("I'm a divider!") -- Divider
 
 local sectionA = window:Section("Test Elements")
 
