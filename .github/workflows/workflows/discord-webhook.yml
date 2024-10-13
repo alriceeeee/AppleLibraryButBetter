@@ -1,0 +1,19 @@
+name: Discord Commit Notification
+on: [push]
+jobs:
+  discord_notification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Discord Notification
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        uses: Ilshidur/action-discord@master
+        with:
+          args: |
+            New commit to {{ EVENT_PAYLOAD.repository.full_name }}
+            **Commit Message:** {{ EVENT_PAYLOAD.head_commit.message }}
+            **Author:** {{ EVENT_PAYLOAD.head_commit.author.name }}
+            **Changes:** {{ EVENT_PAYLOAD.head_commit.url }}
