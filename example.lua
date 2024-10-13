@@ -22,10 +22,6 @@ sectionA:TextField("Enter text here!", "Enter text here...", function(a)
     print(a) 
 end)
 
-sectionA:Slider("Slider Name", 0, 100, 50, function(value)
-    print("Slider value:", value)
-end)
-
 window:Divider("Just dividin'")
 
 local sectionB = window:Section("Test Notifications")
