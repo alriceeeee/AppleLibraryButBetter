@@ -75,7 +75,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
         sicon.Image = "rbxassetid://12621719043"
         sicon.ScaleType = Enum.ScaleType.Fit
         sicon.TileSize = UDim2.new(1, 0, 20, 0)
-        sicon.ImageColor3 = Color3.fromRGB(200, 200, 200)
+        sicon.ImageColor3 = Color3.fromRGB(100, 100, 100)
 
         local ug = Instance.new("UIGradient")
         ug.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(50, 50, 50)), ColorSequenceKeypoint.new(0.01, Color3.fromRGB(61, 61, 61)), ColorSequenceKeypoint.new(0.47, Color3.fromRGB(41, 41, 41)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
@@ -194,7 +194,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     searchicon.Position = UDim2.new(0.0379999988, -2, 0.138999999, 2)
     searchicon.Size = UDim2.new(0, 24, 0, 21)
     searchicon.Image = "rbxassetid://2804603863"
-    searchicon.ImageColor3 = Color3.fromRGB(200, 200, 200)
+    searchicon.ImageColor3 = Color3.fromRGB(100, 100, 100)
     searchicon.ScaleType = Enum.ScaleType.Fit
 
     local searchtextbox = Instance.new("TextBox")
