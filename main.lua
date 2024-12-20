@@ -177,7 +177,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local search = Instance.new("Frame")
     search.Name = "search"
     search.Parent = main
-    search.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+    search.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
     search.Position = UDim2.new(0.0256588068, 0, 0.0958904102, 0)
     search.Size = UDim2.new(0, 225, 0, 34)
 
@@ -200,7 +200,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local searchtextbox = Instance.new("TextBox")
     searchtextbox.Name = "searchtextbox"
     searchtextbox.Parent = search
-    searchtextbox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    searchtextbox.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
     searchtextbox.BackgroundTransparency = 1
     searchtextbox.ClipsDescendants = true
     searchtextbox.Position = UDim2.new(0.180257514, 0, -0.0162218884, 0)
@@ -223,7 +223,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     sidebar.Name = "sidebar"
     sidebar.Parent = main
     sidebar.Active = true
-    sidebar.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+    sidebar.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     sidebar.BackgroundTransparency = 1
     sidebar.BorderSizePixel = 0
     sidebar.Position = UDim2.new(0.0249653254, 0, 0.181506842, 0)
@@ -261,7 +261,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local buttons = Instance.new("Frame")
     buttons.Name = "buttons"
     buttons.Parent = main
-    buttons.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+    buttons.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     buttons.BackgroundTransparency = 1
     buttons.Size = UDim2.new(0, 105, 0, 57)
 
@@ -277,7 +277,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local close = Instance.new("TextButton")
     close.Name = "close"
     close.Parent = buttons
-    close.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
+    close.BackgroundColor3 = Color3.fromRGB(150, 30, 30)
     close.Size = UDim2.new(0, 16, 0, 16)
     close.AutoButtonColor = false
     close.Font = Enum.Font.SourceSans
@@ -297,7 +297,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local minimize = Instance.new("TextButton")
     minimize.Name = "minimize"
     minimize.Parent = buttons
-    minimize.BackgroundColor3 = Color3.fromRGB(200, 150, 50)
+    minimize.BackgroundColor3 = Color3.fromRGB(150, 100, 30)
     minimize.Size = UDim2.new(0, 16, 0, 16)
     minimize.AutoButtonColor = false
     minimize.Font = Enum.Font.SourceSans
@@ -314,7 +314,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local resize = Instance.new("TextButton")
     resize.Name = "resize"
     resize.Parent = buttons
-    resize.BackgroundColor3 = Color3.fromRGB(50, 200, 50)
+    resize.BackgroundColor3 = Color3.fromRGB(30, 150, 30)
     resize.Size = UDim2.new(0, 16, 0, 16)
     resize.AutoButtonColor = false
     resize.Font = Enum.Font.SourceSans
@@ -332,7 +332,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local title = Instance.new("TextLabel")
     title.Name = "title"
     title.Parent = main
-    title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    title.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     title.BackgroundTransparency = 1
     title.BorderSizePixel = 2
     title.Position = UDim2.new(0.389000326, 0, 0.0351027399, 0)
