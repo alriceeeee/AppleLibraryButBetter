@@ -991,6 +991,41 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
         return sec
     end
 
+    function window:ThemeSetting()
+        local themeFrame = Instance.new("Frame")
+        themeFrame.Name = "themeFrame"
+        themeFrame.Parent = workarea
+        themeFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        themeFrame.Size = UDim2.new(0, 200, 0, 100)
+
+        local lightButton = Instance.new("TextButton")
+        lightButton.Name = "lightButton"
+        lightButton.Parent = themeFrame
+        lightButton.Text = "Light Mode"
+        lightButton.Size = UDim2.new(0, 180, 0, 40)
+        lightButton.Position = UDim2.new(0, 10, 0, 10)
+
+        local darkButton = Instance.new("TextButton")
+        darkButton.Name = "darkButton"
+        darkButton.Parent = themeFrame
+        darkButton.Text = "Dark Mode"
+        darkButton.Size = UDim2.new(0, 180, 0, 40)
+        darkButton.Position = UDim2.new(0, 10, 0, 60)
+
+        lightButton.MouseButton1Click:Connect(function()
+            main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            title.TextColor3 = Color3.fromRGB(0, 0, 0)
+            -- Set other elements to light mode colors
+        end)
+
+        darkButton.MouseButton1Click:Connect(function()
+            
+            main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+            title.TextColor3 = Color3.fromRGB(255, 255, 255)
+            -- Set other elements to dark mode colors
+        end)
+    end
+
     return window
 end
 
