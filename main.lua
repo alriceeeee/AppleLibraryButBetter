@@ -339,7 +339,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     title.Size = UDim2.new(0, 400, 0, 15)
     title.Font = Enum.Font.Gotham
     title.LineHeight = 1.180
-    title.TextColor3 = Color3.fromRGB(150, 150, 150)
+    title.TextColor3 = Color3.fromRGB(255, 255, 255)
     title.TextSize = 28
     title.TextWrapped = true
     title.TextXAlignment = Enum.TextXAlignment.Left
@@ -420,7 +420,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     notiftitle.ZIndex = 3
     notiftitle.Font = Enum.Font.GothamMedium
     notiftitle.Text = "Notice"
-    notiftitle.TextColor3 = Color3.fromRGB(150, 150, 150)
+    notiftitle.TextColor3 = Color3.fromRGB(255, 255, 255)
     notiftitle.TextSize = 28
 
     local notiftext = Instance.new("TextLabel")
@@ -433,7 +433,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     notiftext.ZIndex = 3
     notiftext.Font = Enum.Font.Gotham
     notiftext.Text = "We would like to contact you regarding your car's extended warranty."
-    notiftext.TextColor3 = Color3.fromRGB(50, 50, 50)
+    notiftext.TextColor3 = Color3.fromRGB(255, 255, 255)
     notiftext.TextSize = 16
     notiftext.TextWrapped = true
 
@@ -474,7 +474,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     notif2title.ZIndex = 3
     notif2title.Font = Enum.Font.GothamMedium
     notif2title.Text = "Notice"
-    notif2title.TextColor3 = Color3.fromRGB(150, 150, 150)
+    notif2title.TextColor3 = Color3.fromRGB(255, 255, 255)
     notif2title.TextSize = 28
 
 
@@ -488,7 +488,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     notif2text.ZIndex = 3
     notif2text.Font = Enum.Font.Gotham
     notif2text.Text = "We would like to contact you regarding your car's extended warranty."
-    notif2text.TextColor3 = Color3.fromRGB(50, 50, 50)
+    notif2text.TextColor3 = Color3.fromRGB(255, 255, 255)
     notif2text.TextSize = 16
     notif2text.TextWrapped = true
 
