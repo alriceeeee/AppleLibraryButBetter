@@ -991,30 +991,74 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
         return sec
     end
 
-    function window:ToggleTheme()
-        if main.BackgroundColor3 == Color3.fromRGB(255, 255, 255) then
-            main.BackgroundColor3 = Color3.fromRGB(30, 30, 30) -- Dark mode
-            title.TextColor3 = Color3.fromRGB(255, 255, 255)
-            -- Update other UI elements for dark mode
-        else
-            main.BackgroundColor3 = Color3.fromRGB(255, 255, 255) -- Light mode
-            title.TextColor3 = Color3.fromRGB(0, 0, 0)
-            -- Update other UI elements for light mode
+    function window:EnableDarkMode()
+        main.BackgroundColor3 = Color3.fromRGB(30, 30, 30) -- Dark mode
+        title.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+        -- Update other UI elements for dark mode
+        for _, button in pairs(buttons:GetChildren()) do
+            if button:IsA("TextButton") then
+                button.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+                button.TextColor3 = Color3.fromRGB(255, 255, 255)
+            end
         end
+
+        for _, label in pairs(main:GetChildren()) do
+            if label:IsA("TextLabel") then
+                label.TextColor3 = Color3.fromRGB(255, 255, 255)
+            end
+        end
+
+        -- Additional UI elements can be updated here
     end
 
-    local themeButton = Instance.new("TextButton")
-    themeButton.Name = "themeButton"
-    themeButton.Parent = buttons
-    themeButton.BackgroundColor3 = Color3.fromRGB(21, 103, 251)
-    themeButton.Size = UDim2.new(0, 16, 0, 16)
-    themeButton.AutoButtonColor = false
-    themeButton.Font = Enum.Font.SourceSans
-    themeButton.Text = "Toggle Theme"
-    themeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-    themeButton.TextSize = 14
-    themeButton.MouseButton1Click:Connect(function()
-        window:ToggleTheme()
+    function window:EnableLightMode()
+        main.BackgroundColor3 = Color3.fromRGB(255, 255, 255) -- Light mode
+        title.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+        -- Update other UI elements for light mode
+        for _, button in pairs(buttons:GetChildren()) do
+            if button:IsA("TextButton") then
+                button.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+                button.TextColor3 = Color3.fromRGB(0, 0, 0)
+            end
+        end
+
+        for _, label in pairs(main:GetChildren()) do
+            if label:IsA("TextLabel") then
+                label.TextColor3 = Color3.fromRGB(0, 0, 0)
+            end
+        end
+
+        -- Additional UI elements can be updated here
+    end
+
+    local themeButtonDark = Instance.new("TextButton")
+    themeButtonDark.Name = "themeButtonDark"
+    themeButtonDark.Parent = buttons
+    themeButtonDark.BackgroundColor3 = Color3.fromRGB(21, 103, 251)
+    themeButtonDark.Size = UDim2.new(0, 16, 0, 16)
+    themeButtonDark.AutoButtonColor = false
+    themeButtonDark.Font = Enum.Font.SourceSans
+    themeButtonDark.Text = "Enable Dark Mode"
+    themeButtonDark.TextColor3 = Color3.fromRGB(255, 255, 255)
+    themeButtonDark.TextSize = 14
+    themeButtonDark.MouseButton1Click:Connect(function()
+        window:EnableDarkMode()
+    end)
+
+    local themeButtonLight = Instance.new("TextButton")
+    themeButtonLight.Name = "themeButtonLight"
+    themeButtonLight.Parent = buttons
+    themeButtonLight.BackgroundColor3 = Color3.fromRGB(21, 103, 251)
+    themeButtonLight.Size = UDim2.new(0, 16, 0, 16)
+    themeButtonLight.AutoButtonColor = false
+    themeButtonLight.Font = Enum.Font.SourceSans
+    themeButtonLight.Text = "Enable Light Mode"
+    themeButtonLight.TextColor3 = Color3.fromRGB(255, 255, 255)
+    themeButtonLight.TextSize = 14
+    themeButtonLight.MouseButton1Click:Connect(function()
+        window:EnableLightMode()
     end)
 
     return window
