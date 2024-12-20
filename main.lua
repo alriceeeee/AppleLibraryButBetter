@@ -1026,6 +1026,8 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
         end)
     end
 
+    self:ThemeSetting()
+
     return window
 end
 
