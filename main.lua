@@ -368,7 +368,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     notificon.Size = UDim2.new(0, 100, 0, 100)
     notificon.ZIndex = 3
     notificon.Image = "rbxassetid://4871684504"
-    notificon.ImageColor3 = Color3.fromRGB(95, 95, 95)
+    notificon.ImageColor3 = Color3.fromRGB(150, 150, 150)
 
     local notifbutton1 = Instance.new("TextButton")
     notifbutton1.Name = "notifbutton1"
@@ -420,7 +420,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     notiftitle.ZIndex = 3
     notiftitle.Font = Enum.Font.GothamMedium
     notiftitle.Text = "Notice"
-    notiftitle.TextColor3 = Color3.fromRGB(95, 95, 95)
+    notiftitle.TextColor3 = Color3.fromRGB(150, 150, 150)
     notiftitle.TextSize = 28
 
     local notiftext = Instance.new("TextLabel")
@@ -462,7 +462,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     notif2icon.Size = UDim2.new(0, 100, 0, 100)
     notif2icon.ZIndex = 3
     notif2icon.Image = "rbxassetid://12608260095"
-    notif2icon.ImageColor3 = Color3.fromRGB(95, 95, 95)
+    notif2icon.ImageColor3 = Color3.fromRGB(150, 150, 150)
 
     local notif2title = Instance.new("TextLabel")
     notif2title.Name = "notif2title"
@@ -474,7 +474,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     notif2title.ZIndex = 3
     notif2title.Font = Enum.Font.GothamMedium
     notif2title.Text = "Notice"
-    notif2title.TextColor3 = Color3.fromRGB(95, 95, 95)
+    notif2title.TextColor3 = Color3.fromRGB(150, 150, 150)
     notif2title.TextSize = 28
 
 
@@ -547,7 +547,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     notif2button2.ZIndex = 3
     notif2button2.Font = Enum.Font.Gotham
     notif2button2.Text = "Go away."
-    notif2button2.TextColor3 = Color3.fromRGB(95, 95, 95)
+    notif2button2.TextColor3 = Color3.fromRGB(150, 150, 150)
     notif2button2.TextSize = 21
 
 
@@ -627,7 +627,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
         t2.ZIndex = 4
         t2.Font = Enum.Font.Gotham
         t2.Text = text2
-        t2.TextColor3 = Color3.fromRGB(95, 95, 95)
+        t2.TextColor3 = Color3.fromRGB(150, 150, 150)
         t2.TextSize = 16
         t2.TextWrapped = true
         t2.TextXAlignment = Enum.TextXAlignment.Left
@@ -644,7 +644,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
         t1.ZIndex = 4
         t1.Font = Enum.Font.GothamMedium
         t1.Text = text1
-        t1.TextColor3 = Color3.fromRGB(95, 95, 95)
+        t1.TextColor3 = Color3.fromRGB(150, 150, 150)
         t1.TextSize = 28
         t1.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -658,7 +658,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
         ticon.Size = UDim2.new(0, 71, 0, 71)
         ticon.ZIndex = 4
         ticon.Image = icon
-        ticon.ImageColor3 = Color3.fromRGB(95, 95, 95)
+        ticon.ImageColor3 = Color3.fromRGB(150, 150, 150)
         ticon.ScaleType = Enum.ScaleType.Fit
 
 
@@ -728,7 +728,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
         sidebardivider.Size = UDim2.new(0, 226, 0, 26)
         sidebardivider.Font = Enum.Font.Gotham
         sidebardivider.Text = name
-        sidebardivider.TextColor3 = Color3.fromRGB(95, 95, 95)
+        sidebardivider.TextColor3 = Color3.fromRGB(150, 150, 150)
         sidebardivider.TextSize = 21
         sidebardivider.TextWrapped = true
         sidebardivider.TextXAlignment = Enum.TextXAlignment.Left
@@ -850,7 +850,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
             label.BorderSizePixel = 2
             label.Size = UDim2.new(0, 418, 0, 37)
             label.Font = Enum.Font.Gotham
-            label.TextColor3 = Color3.fromRGB(95, 95, 95)
+            label.TextColor3 = Color3.fromRGB(150, 150, 150)
             label.TextSize = 21
             label.TextWrapped = true
             label.Text = name
