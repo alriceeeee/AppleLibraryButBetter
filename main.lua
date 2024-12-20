@@ -78,7 +78,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
         sicon.ImageColor3 = Color3.fromRGB(200, 200, 200)
 
         local ug = Instance.new("UIGradient")
-        ug.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.01, Color3.fromRGB(61, 61, 61)), ColorSequenceKeypoint.new(0.47, Color3.fromRGB(41, 41, 41)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+        ug.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(50, 50, 50)), ColorSequenceKeypoint.new(0.01, Color3.fromRGB(61, 61, 61)), ColorSequenceKeypoint.new(0.47, Color3.fromRGB(41, 41, 41)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
         ug.Rotation = 90
         ug.Parent = sicon
 
@@ -156,7 +156,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local workarea = Instance.new("Frame")
     workarea.Name = "workarea"
     workarea.Parent = main
-    workarea.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    workarea.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
     workarea.Position = UDim2.new(0.36403501, 0, 0, 0)
     workarea.Size = UDim2.new(0, 458, 0, 584)
 
@@ -167,7 +167,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local workareacornerhider = Instance.new("Frame")
     workareacornerhider.Name = "workareacornerhider"
     workareacornerhider.Parent = workarea
-    workareacornerhider.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    workareacornerhider.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
     workareacornerhider.BorderSizePixel = 0
     workareacornerhider.Size = UDim2.new(0, 18, 0.99895674, 0)
 
@@ -188,7 +188,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local searchicon = Instance.new("ImageButton")
     searchicon.Name = "searchicon"
     searchicon.Parent = search
-    searchicon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    searchicon.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
     searchicon.BackgroundTransparency = 1
     searchicon.BorderColor3 = Color3.fromRGB(27, 42, 53)
     searchicon.Position = UDim2.new(0.0379999988, -2, 0.138999999, 2)
@@ -209,7 +209,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     searchtextbox.LineHeight = 0.870
     searchtextbox.PlaceholderText = "Search"
     searchtextbox.Text = ""
-    searchtextbox.TextColor3 = Color3.fromRGB(255, 255, 255)
+    searchtextbox.TextColor3 = Color3.fromRGB(50, 50, 50)
     searchtextbox.TextSize = 22
     searchtextbox.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -339,7 +339,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     title.Size = UDim2.new(0, 400, 0, 15)
     title.Font = Enum.Font.Gotham
     title.LineHeight = 1.180
-    title.TextColor3 = Color3.fromRGB(255, 255, 255)
+    title.TextColor3 = Color3.fromRGB(50, 50, 50)
     title.TextSize = 28
     title.TextWrapped = true
     title.TextXAlignment = Enum.TextXAlignment.Left
@@ -362,7 +362,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local notificon = Instance.new("ImageLabel")
     notificon.Name = "notificon"
     notificon.Parent = notif
-    notificon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    notificon.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
     notificon.BackgroundTransparency = 1
     notificon.Position = UDim2.new(0.335526317, 0, 0.0994475111, 0)
     notificon.Size = UDim2.new(0, 100, 0, 100)
@@ -379,7 +379,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     notifbutton1.ZIndex = 3
     notifbutton1.Font = Enum.Font.Gotham
     notifbutton1.Text = "OK"
-    notifbutton1.TextColor3 = Color3.fromRGB(255, 255, 255)
+    notifbutton1.TextColor3 = Color3.fromRGB(50, 50, 50)
     notifbutton1.TextSize = 21
 
     local uc_12 = Instance.new("UICorner")
@@ -413,7 +413,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local notiftitle = Instance.new("TextLabel")
     notiftitle.Name = "notiftitle"
     notiftitle.Parent = notif
-    notiftitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    notiftitle.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
     notiftitle.BackgroundTransparency = 1
     notiftitle.Position = UDim2.new(0.167763159, 0, 0.375690609, 0)
     notiftitle.Size = UDim2.new(0, 200, 0, 50)
@@ -426,14 +426,14 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local notiftext = Instance.new("TextLabel")
     notiftext.Name = "notiftext"
     notiftext.Parent = notif
-    notiftext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    notiftext.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
     notiftext.BackgroundTransparency = 1
     notiftext.Position = UDim2.new(0.0822368413, 0, 0.513812184, 0)
     notiftext.Size = UDim2.new(0, 254, 0, 66)
     notiftext.ZIndex = 3
     notiftext.Font = Enum.Font.Gotham
     notiftext.Text = "We would like to contact you regarding your car's extended warranty."
-    notiftext.TextColor3 = Color3.fromRGB(255, 255, 255)
+    notiftext.TextColor3 = Color3.fromRGB(50, 50, 50)
     notiftext.TextSize = 16
     notiftext.TextWrapped = true
 
@@ -456,7 +456,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local notif2icon = Instance.new("ImageLabel")
     notif2icon.Name = "notif2icon"
     notif2icon.Parent = notif2
-    notif2icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    notif2icon.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
     notif2icon.BackgroundTransparency = 1
     notif2icon.Position = UDim2.new(0.335526317, 0, 0.0994475111, 0)
     notif2icon.Size = UDim2.new(0, 100, 0, 100)
@@ -467,7 +467,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local notif2title = Instance.new("TextLabel")
     notif2title.Name = "notif2title"
     notif2title.Parent = notif2
-    notif2title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    notif2title.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
     notif2title.BackgroundTransparency = 1
     notif2title.Position = UDim2.new(0.167763159, 0, 0.375690609, 0)
     notif2title.Size = UDim2.new(0, 200, 0, 50)
@@ -481,14 +481,14 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local notif2text = Instance.new("TextLabel")
     notif2text.Name = "notif2text"
     notif2text.Parent = notif2
-    notif2text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    notif2text.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
     notif2text.BackgroundTransparency = 1
     notif2text.Position = UDim2.new(0.0822368413, 0, 0.513812184, 0)
     notif2text.Size = UDim2.new(0, 254, 0, 66)
     notif2text.ZIndex = 3
     notif2text.Font = Enum.Font.Gotham
     notif2text.Text = "We would like to contact you regarding your car's extended warranty."
-    notif2text.TextColor3 = Color3.fromRGB(255, 255, 255)
+    notif2text.TextColor3 = Color3.fromRGB(50, 50, 50)
     notif2text.TextSize = 16
     notif2text.TextWrapped = true
 
@@ -502,7 +502,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     notif2button1.ZIndex = 3
     notif2button1.Font = Enum.Font.Gotham
     notif2button1.Text = "Sure!"
-    notif2button1.TextColor3 = Color3.fromRGB(255, 255, 255)
+    notif2button1.TextColor3 = Color3.fromRGB(50, 50, 50)
     notif2button1.TextSize = 21
 
     local uc_15 = Instance.new("UICorner")
@@ -606,7 +606,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
         tempnotif.Name = "tempnotif"
         tempnotif.Parent = scrgui
         tempnotif.AnchorPoint = Vector2.new(0.5, 0.5)
-        tempnotif.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        tempnotif.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
         tempnotif.BackgroundTransparency = 0.150
         tempnotif.Position = UDim2.new(1, -250, 0.0794737339, 0)
         tempnotif.Size = UDim2.new(0, 447, 0, 117)
@@ -620,7 +620,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
         local t2 = Instance.new("TextLabel")
         t2.Name = "t2"
         t2.Parent = tempnotif
-        t2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        t2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
         t2.BackgroundTransparency = 1
         t2.Position = UDim2.new(0.236927822, 0, 0.470085472, 0)
         t2.Size = UDim2.new(0, 326, 0, 52)
@@ -637,7 +637,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
         local t1 = Instance.new("TextLabel")
         t1.Name = "t1"
         t1.Parent = tempnotif
-        t1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        t1.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
         t1.BackgroundTransparency = 1
         t1.Position = UDim2.new(0.234690696, 0, 0.193464488, 0)
         t1.Size = UDim2.new(0, 327, 0, 25)
@@ -652,7 +652,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
         local ticon = Instance.new("ImageLabel")
         ticon.Name = "ticon"
         ticon.Parent = tempnotif
-        ticon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        ticon.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
         ticon.BackgroundTransparency = 1
         ticon.Position = UDim2.new(0.0311112702, 0, 0.193464488, 0)
         ticon.Size = UDim2.new(0, 71, 0, 71)
@@ -721,7 +721,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
         local sidebardivider = Instance.new("TextLabel")
         sidebardivider.Name = "sidebardivider"
         sidebardivider.Parent = sidebar
-        sidebardivider.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        sidebardivider.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
         sidebardivider.BackgroundTransparency = 1
         sidebardivider.BorderSizePixel = 2
         sidebardivider.Position = UDim2.new(0, 0, 0.00215982716, 0)
@@ -758,7 +758,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
         workareamain.Name = "workareamain"
         workareamain.Parent = workarea
         workareamain.Active = true
-        workareamain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        workareamain.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
         workareamain.BackgroundTransparency = 1
         workareamain.BorderSizePixel = 0
         workareamain.Position = UDim2.new(0.0393013097, 0, 0.0958904102, 0)
@@ -783,7 +783,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
                 v.TextColor3 = Color3.fromRGB(0, 0, 0)
             end
             sidebar2.BackgroundTransparency = 0
-            sidebar2.TextColor3 = Color3.fromRGB(255, 255, 255)
+            sidebar2.TextColor3 = Color3.fromRGB(50, 50, 50)
             for b, v in next, workareas do
                 v.Visible = false
             end
@@ -793,7 +793,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
             local section = Instance.new("TextLabel")
             section.Name = "section"
             section.Parent = workareamain
-            section.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            section.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
             section.BackgroundTransparency = 1
             section.BorderSizePixel = 2
             section.Size = UDim2.new(0, 418, 0, 50)
@@ -845,7 +845,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
             local label = Instance.new("TextLabel")
             label.Name = "label"
             label.Parent = workareamain
-            label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            label.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
             label.BackgroundTransparency = 1
             label.BorderSizePixel = 2
             label.Size = UDim2.new(0, 418, 0, 37)
@@ -861,7 +861,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
             local toggleswitch = Instance.new("TextLabel")
             toggleswitch.Name = "toggleswitch"
             toggleswitch.Parent = workareamain
-            toggleswitch.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            toggleswitch.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
             toggleswitch.BackgroundTransparency = 1
             toggleswitch.BorderSizePixel = 2
             toggleswitch.Size = UDim2.new(0, 418, 0, 37)
@@ -885,7 +885,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
 
             local TextButton = Instance.new("TextButton")
             TextButton.Parent = Frame
-            TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            TextButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
             TextButton.Size = UDim2.new(0, 34, 0, 34)
             TextButton.AutoButtonColor = false
             TextButton.Text = ""
@@ -938,7 +938,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
             local textfield = Instance.new("TextLabel")
             textfield.Name = "textfield"
             textfield.Parent = workareamain
-            textfield.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            textfield.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
             textfield.BackgroundTransparency = 1
             textfield.BorderSizePixel = 2
             textfield.Size = UDim2.new(0, 418, 0, 37)
@@ -961,7 +961,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
 
             local TextBox = Instance.new("TextBox")
             TextBox.Parent = Frame_2
-            TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            TextBox.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
             TextBox.BackgroundTransparency = 1
             TextBox.BorderColor3 = Color3.fromRGB(27, 42, 53)
             TextBox.BorderSizePixel = 0
