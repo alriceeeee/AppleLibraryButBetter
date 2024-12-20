@@ -991,42 +991,31 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
         return sec
     end
 
-    function window:ThemeSetting()
-        local themeFrame = Instance.new("Frame")
-        themeFrame.Name = "themeFrame"
-        themeFrame.Parent = workarea
-        themeFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        themeFrame.Size = UDim2.new(0, 200, 0, 100)
-
-        local lightButton = Instance.new("TextButton")
-        lightButton.Name = "lightButton"
-        lightButton.Parent = themeFrame
-        lightButton.Text = "Light Mode"
-        lightButton.Size = UDim2.new(0, 180, 0, 40)
-        lightButton.Position = UDim2.new(0, 10, 0, 10)
-
-        local darkButton = Instance.new("TextButton")
-        darkButton.Name = "darkButton"
-        darkButton.Parent = themeFrame
-        darkButton.Text = "Dark Mode"
-        darkButton.Size = UDim2.new(0, 180, 0, 40)
-        darkButton.Position = UDim2.new(0, 10, 0, 60)
-
-        lightButton.MouseButton1Click:Connect(function()
-            main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-            title.TextColor3 = Color3.fromRGB(0, 0, 0)
-            -- Set other elements to light mode colors
-        end)
-
-        darkButton.MouseButton1Click:Connect(function()
-            
-            main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    function window:ToggleTheme()
+        if main.BackgroundColor3 == Color3.fromRGB(255, 255, 255) then
+            main.BackgroundColor3 = Color3.fromRGB(30, 30, 30) -- Dark mode
             title.TextColor3 = Color3.fromRGB(255, 255, 255)
-            -- Set other elements to dark mode colors
-        end)
+            -- Update other UI elements for dark mode
+        else
+            main.BackgroundColor3 = Color3.fromRGB(255, 255, 255) -- Light mode
+            title.TextColor3 = Color3.fromRGB(0, 0, 0)
+            -- Update other UI elements for light mode
+        end
     end
 
-    self:ThemeSetting()
+    local themeButton = Instance.new("TextButton")
+    themeButton.Name = "themeButton"
+    themeButton.Parent = buttons
+    themeButton.BackgroundColor3 = Color3.fromRGB(21, 103, 251)
+    themeButton.Size = UDim2.new(0, 16, 0, 16)
+    themeButton.AutoButtonColor = false
+    themeButton.Font = Enum.Font.SourceSans
+    themeButton.Text = "Toggle Theme"
+    themeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+    themeButton.TextSize = 14
+    themeButton.MouseButton1Click:Connect(function()
+        window:ToggleTheme()
+    end)
 
     return window
 end

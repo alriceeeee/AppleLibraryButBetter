@@ -47,6 +47,10 @@ sectionB:Button("Notification 2", function() window:Notify2("Hello!", "I am noti
     end)
 end)
 
+sectionB:Button("Toggle Theme", function() 
+    window:ToggleTheme() 
+end)
+
 window:GreenButton(function() 
     print("You clicked the green button!")
 end)
