@@ -141,7 +141,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     
     main.InputChanged:Connect(function(input)
         if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-            dragInput = input
+            dragInput = input  
         end
     end)
     
@@ -231,7 +231,6 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     sidebar.AutomaticCanvasSize = "Y"
     sidebar.CanvasSize = UDim2.new(0, 0, 0, 0)
     sidebar.ScrollBarThickness = 2
-    sidebar.TextColor3 = Color3.fromRGB(255, 255, 255)
 
     local ull_2 = Instance.new("UIListLayout")
     ull_2.Parent = sidebar
