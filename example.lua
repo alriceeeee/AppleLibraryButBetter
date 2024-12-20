@@ -56,3 +56,13 @@ window:GreenButton(function()
 end)
 
 sectionA:Select()
+
+local sectionC = window:Section("Theme Toggle")
+
+sectionC:Button("Enable Dark Mode", function() 
+    window:ToggleTheme() 
+end)
+
+sectionC:Button("Enable Light Mode", function() 
+    window:ToggleTheme() 
+end)
