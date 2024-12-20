@@ -339,7 +339,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     title.Size = UDim2.new(0, 400, 0, 15)
     title.Font = Enum.Font.Gotham
     title.LineHeight = 1.180
-    title.TextColor3 = Color3.fromRGB(50, 50, 50)
+    title.TextColor3 = Color3.fromRGB(150, 150, 150)
     title.TextSize = 28
     title.TextWrapped = true
     title.TextXAlignment = Enum.TextXAlignment.Left
@@ -867,7 +867,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
             toggleswitch.Size = UDim2.new(0, 418, 0, 37)
             toggleswitch.Font = Enum.Font.Gotham
             toggleswitch.Text = name
-            toggleswitch.TextColor3 = Color3.fromRGB(125, 125, 125)
+            toggleswitch.TextColor3 = Color3.fromRGB(150, 150, 150)
             toggleswitch.TextSize = 21
             toggleswitch.TextWrapped = true
             toggleswitch.TextXAlignment = Enum.TextXAlignment.Left
@@ -944,7 +944,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
             textfield.Size = UDim2.new(0, 418, 0, 37)
             textfield.Font = Enum.Font.Gotham
             textfield.Text = name
-            textfield.TextColor3 = Color3.fromRGB(95, 95, 95)
+            textfield.TextColor3 = Color3.fromRGB(150, 150, 150)
             textfield.TextSize = 21
             textfield.TextWrapped = true
             textfield.TextXAlignment = Enum.TextXAlignment.Left
