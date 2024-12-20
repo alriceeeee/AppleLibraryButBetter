@@ -52,8 +52,8 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
         splash.Name = "splash"
         splash.Parent = scrgui
         splash.AnchorPoint = Vector2.new(0.5, 0.5)
-        splash.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        splash.BackgroundTransparency = 0.600
+        splash.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+        splash.BackgroundTransparency = 0.800
         splash.Position = UDim2.new(0.5, 0, 2, 0)
         splash.Size = UDim2.new(0, 340, 0, 340)
         splash.Visible = true
@@ -67,7 +67,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
         sicon.Name = "sicon"
         sicon.Parent = splash
         sicon.AnchorPoint = Vector2.new(0.5, 0.5)
-        sicon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        sicon.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
         sicon.BackgroundTransparency = 1
         sicon.Position = UDim2.new(0.5, 0, 0.5, 0)
         sicon.Size = UDim2.new(0, 191, 0, 190)
@@ -75,6 +75,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
         sicon.Image = "rbxassetid://12621719043"
         sicon.ScaleType = Enum.ScaleType.Fit
         sicon.TileSize = UDim2.new(1, 0, 20, 0)
+        sicon.ImageColor3 = Color3.fromRGB(200, 200, 200)
 
         local ug = Instance.new("UIGradient")
         ug.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.01, Color3.fromRGB(61, 61, 61)), ColorSequenceKeypoint.new(0.47, Color3.fromRGB(41, 41, 41)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
@@ -104,7 +105,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     main.Name = "main"
     main.Parent = scrgui
     main.AnchorPoint = Vector2.new(0.5, 0.5)
-    main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    main.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
     main.BackgroundTransparency = 0.150
     main.Position = UDim2.new(0.5, 0, 2, 0)
     main.Size = UDim2.new(0, 721, 0, 584)
@@ -176,7 +177,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local search = Instance.new("Frame")
     search.Name = "search"
     search.Parent = main
-    search.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    search.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
     search.Position = UDim2.new(0.0256588068, 0, 0.0958904102, 0)
     search.Size = UDim2.new(0, 225, 0, 34)
 
@@ -193,7 +194,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     searchicon.Position = UDim2.new(0.0379999988, -2, 0.138999999, 2)
     searchicon.Size = UDim2.new(0, 24, 0, 21)
     searchicon.Image = "rbxassetid://2804603863"
-    searchicon.ImageColor3 = Color3.fromRGB(95, 95, 95)
+    searchicon.ImageColor3 = Color3.fromRGB(200, 200, 200)
     searchicon.ScaleType = Enum.ScaleType.Fit
 
     local searchtextbox = Instance.new("TextBox")
@@ -208,7 +209,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     searchtextbox.LineHeight = 0.870
     searchtextbox.PlaceholderText = "Search"
     searchtextbox.Text = ""
-    searchtextbox.TextColor3 = Color3.fromRGB(95, 95, 95)
+    searchtextbox.TextColor3 = Color3.fromRGB(255, 255, 255)
     searchtextbox.TextSize = 22
     searchtextbox.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -222,7 +223,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     sidebar.Name = "sidebar"
     sidebar.Parent = main
     sidebar.Active = true
-    sidebar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    sidebar.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
     sidebar.BackgroundTransparency = 1
     sidebar.BorderSizePixel = 0
     sidebar.Position = UDim2.new(0.0249653254, 0, 0.181506842, 0)
@@ -230,6 +231,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     sidebar.AutomaticCanvasSize = "Y"
     sidebar.CanvasSize = UDim2.new(0, 0, 0, 0)
     sidebar.ScrollBarThickness = 2
+    sidebar.TextColor3 = Color3.fromRGB(255, 255, 255)
 
     local ull_2 = Instance.new("UIListLayout")
     ull_2.Parent = sidebar
@@ -260,7 +262,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local buttons = Instance.new("Frame")
     buttons.Name = "buttons"
     buttons.Parent = main
-    buttons.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    buttons.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
     buttons.BackgroundTransparency = 1
     buttons.Size = UDim2.new(0, 105, 0, 57)
 
@@ -276,7 +278,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local close = Instance.new("TextButton")
     close.Name = "close"
     close.Parent = buttons
-    close.BackgroundColor3 = Color3.fromRGB(254, 94, 86)
+    close.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
     close.Size = UDim2.new(0, 16, 0, 16)
     close.AutoButtonColor = false
     close.Font = Enum.Font.SourceSans
@@ -296,7 +298,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local minimize = Instance.new("TextButton")
     minimize.Name = "minimize"
     minimize.Parent = buttons
-    minimize.BackgroundColor3 = Color3.fromRGB(255, 189, 46)
+    minimize.BackgroundColor3 = Color3.fromRGB(200, 150, 50)
     minimize.Size = UDim2.new(0, 16, 0, 16)
     minimize.AutoButtonColor = false
     minimize.Font = Enum.Font.SourceSans
@@ -313,7 +315,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     local resize = Instance.new("TextButton")
     resize.Name = "resize"
     resize.Parent = buttons
-    resize.BackgroundColor3 = Color3.fromRGB(39, 200, 63)
+    resize.BackgroundColor3 = Color3.fromRGB(50, 200, 50)
     resize.Size = UDim2.new(0, 16, 0, 16)
     resize.AutoButtonColor = false
     resize.Font = Enum.Font.SourceSans
@@ -338,7 +340,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     title.Size = UDim2.new(0, 400, 0, 15)
     title.Font = Enum.Font.Gotham
     title.LineHeight = 1.180
-    title.TextColor3 = Color3.fromRGB(0, 0, 0)
+    title.TextColor3 = Color3.fromRGB(255, 255, 255)
     title.TextSize = 28
     title.TextWrapped = true
     title.TextXAlignment = Enum.TextXAlignment.Left
@@ -348,7 +350,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     notif.Name = "notif"
     notif.Parent = main
     notif.AnchorPoint = Vector2.new(0.5, 0.5)
-    notif.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    notif.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
     notif.Position = UDim2.new(0.5, 0, 0.5, 0)
     notif.Size = UDim2.new(0, 304, 0, 362)
     notif.Visible = false
@@ -432,7 +434,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     notiftext.ZIndex = 3
     notiftext.Font = Enum.Font.Gotham
     notiftext.Text = "We would like to contact you regarding your car's extended warranty."
-    notiftext.TextColor3 = Color3.fromRGB(95, 95, 95)
+    notiftext.TextColor3 = Color3.fromRGB(255, 255, 255)
     notiftext.TextSize = 16
     notiftext.TextWrapped = true
 
@@ -442,7 +444,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     notif2.Name = "notif2"
     notif2.Parent = main
     notif2.AnchorPoint = Vector2.new(0.5, 0.5)
-    notif2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    notif2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
     notif2.Position = UDim2.new(0.5, 0, 0.5, 0)
     notif2.Size = UDim2.new(0, 304, 0, 362)
     notif2.Visible = false
@@ -487,7 +489,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
     notif2text.ZIndex = 3
     notif2text.Font = Enum.Font.Gotham
     notif2text.Text = "We would like to contact you regarding your car's extended warranty."
-    notif2text.TextColor3 = Color3.fromRGB(95, 95, 95)
+    notif2text.TextColor3 = Color3.fromRGB(255, 255, 255)
     notif2text.TextSize = 16
     notif2text.TextWrapped = true
 
@@ -990,76 +992,6 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
 
         return sec
     end
-
-    function window:EnableDarkMode()
-        main.BackgroundColor3 = Color3.fromRGB(30, 30, 30) -- Dark mode
-        title.TextColor3 = Color3.fromRGB(255, 255, 255)
-
-        -- Update other UI elements for dark mode
-        for _, button in pairs(buttons:GetChildren()) do
-            if button:IsA("TextButton") then
-                button.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-                button.TextColor3 = Color3.fromRGB(255, 255, 255)
-            end
-        end
-
-        for _, label in pairs(main:GetChildren()) do
-            if label:IsA("TextLabel") then
-                label.TextColor3 = Color3.fromRGB(255, 255, 255)
-            end
-        end
-
-        -- Additional UI elements can be updated here
-    end
-
-    function window:EnableLightMode()
-        main.BackgroundColor3 = Color3.fromRGB(255, 255, 255) -- Light mode
-        title.TextColor3 = Color3.fromRGB(0, 0, 0)
-
-        -- Update other UI elements for light mode
-        for _, button in pairs(buttons:GetChildren()) do
-            if button:IsA("TextButton") then
-                button.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
-                button.TextColor3 = Color3.fromRGB(0, 0, 0)
-            end
-        end
-
-        for _, label in pairs(main:GetChildren()) do
-            if label:IsA("TextLabel") then
-                label.TextColor3 = Color3.fromRGB(0, 0, 0)
-            end
-        end
-
-        -- Additional UI elements can be updated here
-    end
-
-    local themeButtonDark = Instance.new("TextButton")
-    themeButtonDark.Name = "themeButtonDark"
-    themeButtonDark.Parent = buttons
-    themeButtonDark.BackgroundColor3 = Color3.fromRGB(21, 103, 251)
-    themeButtonDark.Size = UDim2.new(0, 16, 0, 16)
-    themeButtonDark.AutoButtonColor = false
-    themeButtonDark.Font = Enum.Font.SourceSans
-    themeButtonDark.Text = "Enable Dark Mode"
-    themeButtonDark.TextColor3 = Color3.fromRGB(255, 255, 255)
-    themeButtonDark.TextSize = 14
-    themeButtonDark.MouseButton1Click:Connect(function()
-        window:EnableDarkMode()
-    end)
-
-    local themeButtonLight = Instance.new("TextButton")
-    themeButtonLight.Name = "themeButtonLight"
-    themeButtonLight.Parent = buttons
-    themeButtonLight.BackgroundColor3 = Color3.fromRGB(21, 103, 251)
-    themeButtonLight.Size = UDim2.new(0, 16, 0, 16)
-    themeButtonLight.AutoButtonColor = false
-    themeButtonLight.Font = Enum.Font.SourceSans
-    themeButtonLight.Text = "Enable Light Mode"
-    themeButtonLight.TextColor3 = Color3.fromRGB(255, 255, 255)
-    themeButtonLight.TextSize = 14
-    themeButtonLight.MouseButton1Click:Connect(function()
-        window:EnableLightMode()
-    end)
 
     return window
 end

@@ -47,22 +47,8 @@ sectionB:Button("Notification 2", function() window:Notify2("Hello!", "I am noti
     end)
 end)
 
-sectionB:Button("Toggle Theme", function() 
-    window:ToggleTheme() 
-end)
-
 window:GreenButton(function() 
     print("You clicked the green button!")
 end)
 
 sectionA:Select()
-
-local sectionC = window:Section("Theme Toggle")
-
-sectionC:Button("Enable Dark Mode", function() 
-    window:ToggleTheme() 
-end)
-
-sectionC:Button("Enable Light Mode", function() 
-    window:ToggleTheme() 
-end)
