@@ -1144,25 +1144,21 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
             local dragging = false
 
             Frame.InputBegan:Connect(function(input)
-                if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                if input.UserInputType == Enum.UserInputType.MouseButton1 then
                     dragging = true
                     updateSlider(input)
-                    input.Changed:Connect(function()
-                        if input.UserInputState == Enum.UserInputState.End then
-                            dragging = false
-                        end
-                    end)
+                end
+            end)
+
+            Frame.InputEnded:Connect(function(input)
+                if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                    dragging = false
                 end
             end)
 
             game:GetService("UserInputService").InputChanged:Connect(function(input)
-                if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+                if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
                     updateSlider(input)
-                    if main.Draggable then
-                        main.Draggable = false
-                    end
-                elseif not dragging and not main.Draggable then
-                    main.Draggable = true
                 end
             end)
 
