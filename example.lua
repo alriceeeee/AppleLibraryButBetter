@@ -26,14 +26,6 @@ sectionA:Dropdown("Select an option", {"Option 1", "Option 2", "Option 3"}, func
     print("Selected:", selected)
 end)
 
-sectionA:Slider("Walkspeed", 16, 500, 16, function(value)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
-end)
-
-sectionA:Slider("Jump Power", 50, 500, 50, function(value)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
-end)
-
 window:Divider("Just dividin'")
 
 local sectionB = window:Section("Test Notifications")
