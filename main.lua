@@ -1086,6 +1086,89 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
             return dropdown
         end
 
+        function sec:Slider(name, min, max, default, callback)
+            local slider = Instance.new("TextLabel")
+            slider.Name = "slider"
+            slider.Parent = workareamain
+            slider.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+            slider.BackgroundTransparency = 1
+            slider.BorderSizePixel = 2
+            slider.Size = UDim2.new(0, 418, 0, 37)
+            slider.Font = Enum.Font.Gotham
+            slider.Text = name
+            slider.TextColor3 = Color3.fromRGB(150, 150, 150)
+            slider.TextSize = 21
+            slider.TextWrapped = true
+            slider.TextXAlignment = Enum.TextXAlignment.Left
+
+            local Frame = Instance.new("Frame")
+            Frame.Parent = slider
+            Frame.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
+            Frame.Position = UDim2.new(0.441926777, 0, 0.0270270277, 0)
+            Frame.Size = UDim2.new(0, 233, 0, 34)
+
+            local uc = Instance.new("UICorner")
+            uc.CornerRadius = UDim.new(0, 9)
+            uc.Parent = Frame
+
+            local SliderBar = Instance.new("Frame")
+            SliderBar.Name = "SliderBar"
+            SliderBar.Parent = Frame
+            SliderBar.BackgroundColor3 = Color3.fromRGB(21, 103, 251)
+            SliderBar.Size = UDim2.new(0, 0, 1, 0)
+            SliderBar.BorderSizePixel = 0
+
+            local ucSlider = Instance.new("UICorner")
+            ucSlider.CornerRadius = UDim.new(0, 9)
+            ucSlider.Parent = SliderBar
+
+            local ValueLabel = Instance.new("TextLabel")
+            ValueLabel.Parent = Frame
+            ValueLabel.BackgroundTransparency = 1
+            ValueLabel.Size = UDim2.new(1, 0, 1, 0)
+            ValueLabel.Font = Enum.Font.Gotham
+            ValueLabel.TextColor3 = Color3.fromRGB(12, 12, 12)
+            ValueLabel.TextSize = 21
+            ValueLabel.Text = tostring(default)
+
+            local function updateSlider(input)
+                local pos = UDim2.new(math.clamp((input.Position.X - Frame.AbsolutePosition.X) / Frame.AbsoluteSize.X, 0, 1), 0, 1, 0)
+                SliderBar.Size = pos
+                local value = math.floor(min + (max - min) * pos.X.Scale)
+                ValueLabel.Text = tostring(value)
+                if callback then
+                    callback(value)
+                end
+            end
+
+            local dragging = false
+
+            Frame.InputBegan:Connect(function(input)
+                if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                    dragging = true
+                    updateSlider(input)
+                end
+            end)
+
+            Frame.InputEnded:Connect(function(input)
+                if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                    dragging = false
+                end
+            end)
+
+            game:GetService("UserInputService").InputChanged:Connect(function(input)
+                if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+                    updateSlider(input)
+                end
+            end)
+
+            local defaultScale = (default - min) / (max - min)
+            SliderBar.Size = UDim2.new(defaultScale, 0, 1, 0)
+            ValueLabel.Text = tostring(default)
+
+            return slider
+        end
+
         sidebar2.MouseButton1Click:Connect(function()
             sec:Select()
         end)
