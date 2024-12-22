@@ -985,6 +985,102 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
             end
         end
 
+        function sec:Dropdown(name, options, callback)
+            local isOpen = false
+            local dropdown = Instance.new("TextLabel")
+            dropdown.Name = "dropdown"
+            dropdown.Parent = workareamain
+            dropdown.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+            dropdown.BackgroundTransparency = 1
+            dropdown.BorderSizePixel = 2
+            dropdown.Size = UDim2.new(0, 418, 0, 37)
+            dropdown.Font = Enum.Font.Gotham
+            dropdown.Text = name
+            dropdown.TextColor3 = Color3.fromRGB(150, 150, 150)
+            dropdown.TextSize = 21
+            dropdown.TextWrapped = true
+            dropdown.TextXAlignment = Enum.TextXAlignment.Left
+
+            local Frame = Instance.new("TextButton")
+            Frame.Parent = dropdown
+            Frame.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
+            Frame.Position = UDim2.new(0.441926777, 0, 0.0270270277, 0)
+            Frame.Size = UDim2.new(0, 233, 0, 34)
+            Frame.Text = ""
+            Frame.AutoButtonColor = false
+
+            local uc = Instance.new("UICorner")
+            uc.CornerRadius = UDim.new(0, 9)
+            uc.Parent = Frame
+
+            local Selected = Instance.new("TextLabel")
+            Selected.Parent = Frame
+            Selected.BackgroundTransparency = 1
+            Selected.Position = UDim2.new(0.0643776804, 0, 0, 0)
+            Selected.Size = UDim2.new(0, 203, 0, 34)
+            Selected.Font = Enum.Font.Gotham
+            Selected.Text = "Select..."
+            Selected.TextColor3 = Color3.fromRGB(12, 12, 12)
+            Selected.TextSize = 21
+            Selected.TextXAlignment = Enum.TextXAlignment.Left
+
+            local DropdownContainer = Instance.new("Frame")
+            DropdownContainer.Name = "DropdownContainer"
+            DropdownContainer.Parent = dropdown
+            DropdownContainer.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
+            DropdownContainer.Position = UDim2.new(0.441926777, 0, 1, 0)
+            DropdownContainer.Size = UDim2.new(0, 233, 0, 0)
+            DropdownContainer.ClipsDescendants = true
+            DropdownContainer.Visible = false
+            DropdownContainer.ZIndex = 5
+
+            local uc2 = Instance.new("UICorner")
+            uc2.CornerRadius = UDim.new(0, 9)
+            uc2.Parent = DropdownContainer
+
+            local UIListLayout = Instance.new("UIListLayout")
+            UIListLayout.Parent = DropdownContainer
+            UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+            UIListLayout.Padding = UDim.new(0, 2)
+
+            for _, option in pairs(options) do
+                local OptionButton = Instance.new("TextButton")
+                OptionButton.Parent = DropdownContainer
+                OptionButton.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
+                OptionButton.Size = UDim2.new(1, 0, 0, 34)
+                OptionButton.Font = Enum.Font.Gotham
+                OptionButton.Text = option
+                OptionButton.TextColor3 = Color3.fromRGB(12, 12, 12)
+                OptionButton.TextSize = 21
+                OptionButton.ZIndex = 5
+
+                OptionButton.MouseButton1Click:Connect(function()
+                    Selected.Text = option
+                    if callback then
+                        callback(option)
+                    end
+                    isOpen = false
+                    DropdownContainer:TweenSize(UDim2.new(0, 233, 0, 0), "Out", "Quad", 0.2, true)
+                    task.wait(0.2)
+                    DropdownContainer.Visible = false
+                end)
+            end
+
+            Frame.MouseButton1Click:Connect(function()
+                isOpen = not isOpen
+                if isOpen then
+                    DropdownContainer.Visible = true
+                    DropdownContainer:TweenSize(UDim2.new(0, 233, 0, #options * 36), "Out", "Quad", 0.2, true)
+                else
+                    DropdownContainer:TweenSize(UDim2.new(0, 233, 0, 0), "Out", "Quad", 0.2, true)
+                    task.wait(0.2)
+                    DropdownContainer.Visible = false
+                end
+            end)
+
+            return dropdown
+        end
+
         sidebar2.MouseButton1Click:Connect(function()
             sec:Select()
         end)

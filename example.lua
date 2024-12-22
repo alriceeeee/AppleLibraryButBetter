@@ -22,6 +22,10 @@ sectionA:TextField("Enter text here!", "Enter text here...", function(a)
     print(a) 
 end)
 
+sectionA:Dropdown("Select an option", {"Option 1", "Option 2", "Option 3"}, function(selected)
+    print("Selected:", selected)
+end)
+
 window:Divider("Just dividin'")
 
 local sectionB = window:Section("Test Notifications")
