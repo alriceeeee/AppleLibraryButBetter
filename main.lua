@@ -764,6 +764,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
         workareamain.Position = UDim2.new(0.0393013097, 0, 0.0958904102, 0)
         workareamain.Size = UDim2.new(0, 422, 0, 512)
         workareamain.ZIndex = 3
+        workareamain.AutomaticCanvasSize = Enum.AutomaticSize.Y
         workareamain.CanvasSize = UDim2.new(0, 0, 0, 0)
         workareamain.ScrollBarThickness = 2
         workareamain.Visible = false
@@ -1024,7 +1025,7 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
             Selected.TextSize = 21
             Selected.TextXAlignment = Enum.TextXAlignment.Left
 
-            local DropdownContainer = Instance.new("Frame")
+            local DropdownContainer = Instance.new("ScrollingFrame")
             DropdownContainer.Name = "DropdownContainer"
             DropdownContainer.Parent = dropdown
             DropdownContainer.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
@@ -1033,6 +1034,9 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
             DropdownContainer.ClipsDescendants = true
             DropdownContainer.Visible = false
             DropdownContainer.ZIndex = 5
+            DropdownContainer.AutomaticCanvasSize = Enum.AutomaticSize.Y
+            DropdownContainer.ScrollBarThickness = 2
+            DropdownContainer.CanvasSize = UDim2.new(0, 0, 0, 0)
 
             local uc2 = Instance.new("UICorner")
             uc2.CornerRadius = UDim.new(0, 9)
@@ -1070,7 +1074,8 @@ function lib:init(ti, dosplash, visiblekey, deleteprevious)
                 isOpen = not isOpen
                 if isOpen then
                     DropdownContainer.Visible = true
-                    DropdownContainer:TweenSize(UDim2.new(0, 233, 0, #options * 36), "Out", "Quad", 0.2, true)
+                    local maxHeight = math.min(#options * 36, 200) -- Max height of 200 pixels
+                    DropdownContainer:TweenSize(UDim2.new(0, 233, 0, maxHeight), "Out", "Quad", 0.2, true)
                 else
                     DropdownContainer:TweenSize(UDim2.new(0, 233, 0, 0), "Out", "Quad", 0.2, true)
                     task.wait(0.2)
